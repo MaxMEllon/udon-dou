@@ -1,10 +1,48 @@
 doctype html
 html
   head
-    title
-      | UdonMitchi
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    title #{@title} | うどん道
+    meta charset='utf-8'
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    = stylesheet_link_tag    'application', 'data-turbolinks-track' => true, media: 'all'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    = yield
+    .mdl-layout.mdl-js-layout.mdl-layout--fixed-header.mdl-layout--fixed-drawer
+      header.mdl-layout__header
+        .mdl-layout__header-row
+          span.mdl-layout-title
+            | うどん道
+          .mdl-layout-spacer
+          nav.mdl-navigation
+            a.mdl-navigation__link href='#' = 'hoge'
+            a.mdl-navigation__link href='#' = 'hoge'
+            a.mdl-navigation__link href='#' = 'hoge'
+            a.mdl-navigation__link href='#' = 'hoge'
+      .mdl-layout__drawer
+        span.mdl-layout-title
+          | うどん道
+        nav.mdl-navigation
+          a.mdl-navigation__link href='#' = 'hoge'
+          a.mdl-navigation__link href='#' = 'hoge'
+          a.mdl-navigation__link href='#' = 'hoge'
+          a.mdl-navigation__link href='#' = 'hoge'
+      main.mdl-layout__content
+        .page-content
+          = yield
+      footer.mdl-mega-footer
+        .mdl-mega-footer__middle-section
+          .mdl-mega-footer__drop-down-section
+            input.mdl-mega-footer__heading-checkbox type="checkbox" checked=''
+          .mdl-mega-footer__bottom-section
+            .mdl-logo Udon-dou by maxmellon
+            ul.mdl-mega-footer__link-list
+              li = 'Powered by Ruby on Rails / Google Material Design Lite / UIkit'
+              li = 'Copyright (c) Udon-dou'
+- if notice
+  javascript:
+    UIkit.notify({ message: '#{notice}', timeout: 3000 });
+
+- if alert
+  javascript:
+    UIkit.notify({ message: '#{alert}', timeout: 3000, status: 'danger' });
