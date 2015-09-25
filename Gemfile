@@ -24,6 +24,7 @@ group :development, :test do
   gem 'bullet'
   gem 'quiet_assets'
   gem 'pry-rails'
+  gem 'spring-commands-rspec'
   gem 'pry-byebug'
 end
 
