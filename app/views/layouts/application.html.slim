@@ -14,19 +14,24 @@ html
           span.mdl-layout-title
             | うどん道
           .mdl-layout-spacer
+          .mdl-textfield.mdl-js-textfield.mdl-textfield--expandable.mdl-textfield--floating-label.mdl-textfield--align-right
+            label.mdl-button.mdl-js-button.mdl-button--icon for='fixed-header-drawer-exp'
+              i.material-icons = 'search'
+            .mdl-textfield__expandable-holder
+              input.mdl-textfield__input type='text' name='search' id='fixed-header-drawer-exp'
           nav.mdl-navigation
-            a.mdl-navigation__link href='#' = 'hoge'
-            a.mdl-navigation__link href='#' = 'hoge'
-            a.mdl-navigation__link href='#' = 'hoge'
-            a.mdl-navigation__link href='#' = 'hoge'
+            a.mdl-navigation__link href='#'
+              = fa_icon 'plus-square', text: '新規登録'
+            a.mdl-navigation__link href='#'
+              = fa_icon 'sign-in', text: 'ログイン'
       .mdl-layout__drawer
         span.mdl-layout-title
           | うどん道
         nav.mdl-navigation
-          a.mdl-navigation__link href='#' = 'hoge'
-          a.mdl-navigation__link href='#' = 'hoge'
-          a.mdl-navigation__link href='#' = 'hoge'
-          a.mdl-navigation__link href='#' = 'hoge'
+          a.mdl-navigation__link href='#'
+            = fa_icon 'plus-square', text: '新規登録'
+          a.mdl-navigation__link href='#'
+            = fa_icon 'sign-in', text: 'ログイン'
       main.mdl-layout__content
         .page-content
           = yield
@@ -42,7 +47,6 @@ html
 - if notice
   javascript:
     UIkit.notify({ message: '#{notice}', timeout: 3000 });
-
 - if alert
   javascript:
     UIkit.notify({ message: '#{alert}', timeout: 3000, status: 'danger' });
