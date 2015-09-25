@@ -1,0 +1,10 @@
+{
+  "name": "dsl-generated dependencies",
+  "dependencies": {
+    "uikit": "latest",
+    "select2": "latest",
+    "nprogress": "latest",
+    "material-design-lite": "latest",
+    "material-design-icons": "latest"
+  }
+}

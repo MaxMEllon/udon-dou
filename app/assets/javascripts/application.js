@@ -12,5 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require uikit/js/uikit.min
+//= require uikit/js/components/notify.min
+//= require material-design-lite/material.min
+//= require nprogress/nprogress
 //= require turbolinks
 //= require_tree .
