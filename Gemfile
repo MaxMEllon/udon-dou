@@ -38,7 +38,6 @@ group :test do
   gem 'codeclimate-test-reporter', require: nil
 end
 
-gem 'uikit-sass-rails', git: 'git://github.com/8398a7/uikit-sass-rails'
 gem 'slim-rails'
 gem 'devise'
 gem 'devise-i18n'
@@ -49,4 +48,4 @@ gem 'kaminari'
 gem 'yaml_db'
 gem 'draper'
 gem 'ransack'
-gem 'select2-rails'
+gem 'bower-rails'

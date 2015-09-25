@@ -37,5 +37,6 @@ module UdonMitchi
     config.autoload_paths += %W(#{config.root}/lib)
     config.active_record.raise_in_transactional_callbacks = true
     config.log_tags = [:remote_ip]
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
   end
 end
