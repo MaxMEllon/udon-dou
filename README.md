@@ -3,6 +3,12 @@
 </p>
 ロゴは仮です
 - - -
+[![CircleCI](https://img.shields.io/circleci/project/MaxMEllon/udon-dou.svg?style=flat-square)](https://circleci.com/gh/MaxMEllon/udon-dou)
+[![CodeClimate](https://img.shields.io/codeclimate/github/MaxMEllon/udon-dou.svg?style=flat-square)](https://codeclimate.com/github/MaxMEllon/udon-dou)
+[![TestCoverage](https://img.shields.io/codeclimate/coverage/github/MaxMEllon/udon-dou.svg?style=flat-square)](https://codeclimate.com/github/MaxMEllon/udon-dou/coverage)
+[![Release](https://img.shields.io/github/release/MaxMEllon/udon-dou.svg?style=flat-square)](https://github.com/MaxMEllon/udon-dou/releases/latest)
+[![License](https://img.shields.io/github/license/MaxMEllon/udon-dou.svg?style=flat-square)](https://github.com/MaxMEllon/udon-dou/blob/master/LICENSE.txt)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/MaxMEllon/udon-dou?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## Description
 
