@@ -37,6 +37,8 @@ $ git clone https://github.com/MaxMEllon/udon-dou.git
 $ bundle install
 $ rake db:create
 $ rake db:migrate
+$ bundle exec rake bower:install
+$ bundle exec rake bower:resolve
 $ rails s
 ```
 
