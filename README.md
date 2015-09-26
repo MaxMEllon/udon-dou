@@ -24,11 +24,10 @@
 ## Requirement
 
 - ruby  2.2.0
-- rails 2.2.3
-- gems : Gemfile を参照してください
+- rails 4.2.3
 - postgresql
-- material-design-light
-- uikit
+- gems  : Gemfile を参照してください
+- bower : Bowerfileを参照してください
 
 ## How to run
 
