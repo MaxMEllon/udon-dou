@@ -20,17 +20,17 @@ html
             .mdl-textfield__expandable-holder
               input.mdl-textfield__input type='text' name='search' id='fixed-header-drawer-exp'
           nav.mdl-navigation
-            a.mdl-navigation__link href='#'
+            = link_to new_user_registration_path, class: 'mdl-navigation__link'
               = fa_icon 'plus-square', text: '新規登録'
-            a.mdl-navigation__link href='#'
+            = link_to new_user_session_path, class: 'mdl-navigation__link'
               = fa_icon 'sign-in', text: 'ログイン'
       .mdl-layout__drawer
         span.mdl-layout-title
           | うどん道
         nav.mdl-navigation
-          a.mdl-navigation__link href='#'
+          = link_to new_user_registration_path, class: 'mdl-navigation__link'
             = fa_icon 'plus-square', text: '新規登録'
-          a.mdl-navigation__link href='#'
+          = link_to new_user_session_path, class: 'mdl-navigation__link'
             = fa_icon 'sign-in', text: 'ログイン'
       main.mdl-layout__content
         .page-content
