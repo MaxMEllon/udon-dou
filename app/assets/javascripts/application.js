@@ -16,5 +16,4 @@
 //= require uikit/js/components/notify.min
 //= require material-design-lite/material.min
 //= require nprogress/nprogress
-//= require turbolinks
 //= require_tree .
