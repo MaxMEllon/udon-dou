@@ -44,11 +44,13 @@ end
 
 gem 'annotate'
 gem 'bower-rails'
+gem 'bower-rails'
 gem 'devise'
 gem 'devise-i18n'
 gem 'dotenv-rails'
 gem 'draper'
 gem 'font-awesome-rails'
+gem 'gmaps4rails'
 gem 'kaminari'
 gem 'ransack'
 gem 'slim-rails'

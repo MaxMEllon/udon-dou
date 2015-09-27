@@ -5,6 +5,7 @@
     "select2": "latest",
     "nprogress": "latest",
     "material-design-lite": "latest",
-    "material-design-icons": "latest"
+    "material-design-icons": "latest",
+    "underscore": "latest"
   }
 }
