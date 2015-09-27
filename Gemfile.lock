@@ -132,6 +132,7 @@ GEM
     get_process_mem (0.2.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    gmaps4rails (2.1.2)
     haml (4.0.7)
       tilt
     highline (1.7.7)
@@ -344,6 +345,7 @@ DEPENDENCIES
   draper
   factory_girl_rails
   font-awesome-rails
+  gmaps4rails
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
