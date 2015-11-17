@@ -1,7 +1,10 @@
 test:
+  pre:
+    - bundle exec rake bower:install
   override:
     - "bundle exec bin/rubocop_parallel": { parallel: true }
     - bundle exec rspec --color --format documentation
+    - bundle exec slim-lint app/**/*.slim
 machine:
   ruby:
     version: 2.2.0

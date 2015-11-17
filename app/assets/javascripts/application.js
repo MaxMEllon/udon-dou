@@ -12,10 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require turbolinks
 //= require uikit/js/uikit.min
 //= require uikit/js/components/notify.min
-//= require material-design-lite/material.min
 //= require nprogress/nprogress
-//= require underscore/underscore-min
 //= require gmaps/google
 //= require_tree .

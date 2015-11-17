@@ -33,6 +33,7 @@ module UdonMitchi
       g.fixture_replacement :factory_girl, dir: 'spec/factories'
     end
 
+    config.action_dispatch.default_headers['X-Frame-Options'] = "ALLOWALL"
     config.git_revision = `git log --abbrev-commit --pretty=oneline | head -1 | cut -d' ' -f1`
     config.autoload_paths += %W(#{config.root}/lib)
     config.active_record.raise_in_transactional_callbacks = true

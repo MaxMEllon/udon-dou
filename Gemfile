@@ -39,7 +39,8 @@ group :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'rubocop'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', '2.8.0'
+  gem 'slim_lint'
 end
 
 gem 'annotate'

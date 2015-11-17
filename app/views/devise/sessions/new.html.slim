@@ -1,17 +1,29 @@
-- @title = 'login'
-.mdl-grid
-  .mdl-cell.mdl-cell--3-col
-    h3 = 'ログイン'
-    = form_for resource, as: resource_name, url: session_path(resource_name)  do |f|
-      .mdl-textfield.mdl-js-textfield.mdl-textfield--expandable.mdl-textfield--floating-label
-        = f.email_field :email,  autofocus: true,  class: 'mdl-textfield__input'
-        = f.label :email, for: 'user_email',  class: 'mdl-textfield__label'
-      .mdl-textfield.mdl-js-textfield.mdl-textfield--expandable.mdl-textfield--floating-label
-        = f.password_field :password,  autofocus: true,  class: 'mdl-textfield__input'
-        = f.label :password,  for: 'user_password',  class: 'mdl-textfield__label'
-      - if devise_mapping.rememberable?
-        label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect for='user_remember_me'
-          = f.check_box :remember_me,  class: 'mdl-switch__input'
-          span.mdl-switch__label
-            | パスワードを記録
-      = f.submit 'Log in',  class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent'
+- @title = 'ログイン'
+.uk-width-large-1-6
+.uk-width-large-2-6
+  .uk-panel.uk-panel-box.udon-sign-in
+    .uk-panel-title.bold
+      = fa_icon 'sign-in', text: @title
+    .uk-nav-side
+      .uk-nav-divider
+    = form_for resource, as: resource_name,
+      html: { class: 'uk-form uk-form-stacked' },
+      url: session_path(resource_name) do |f|
+      .uk-form-row
+        .uk-form-icon
+          i.uk-icon-user
+          = f.text_field :email, autofocus: true, placeholder: 'メールアドレス'
+      .uk-form-row
+        .uk-form-icon
+          i.uk-icon-key
+          = f.password_field :password, autocomplete: 'off', placeholder: 'パスワード'
+      .uk-form-row
+        = f.label 'パスワードを記録する'
+        = f.check_box :remember_me
+      .uk-form-row
+        .uk-button-group
+          button.uk-button.uk-button-primary type="submit"
+            = fa_icon 'sign-in', text: 'うどん道へログイン'
+.uk-width-large-2-6
+  = render 'devise/udon'
+

@@ -3,9 +3,3 @@ $(window).on 'page:fetch', ->
 
 $(window).on 'page:load page:restore page:change', ->
   NProgress.done()
-
-$(document).ready ->
-  NProgress.start()
-
-$(window).load ->
-  NProgress.done()
