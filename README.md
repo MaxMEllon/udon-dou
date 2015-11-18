@@ -53,5 +53,5 @@ $ rails s
 
 ## LICENSE
 
-This softhttp://maoudamashii.jokersounds.com/music_rule.htmlware is released under the MIT License, see LICENSE.txt.
+This software is released under the MIT License, see LICENSE.txt.
 
