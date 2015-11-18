@@ -45,7 +45,13 @@ $ rails s
 
 [@maxmellon](https://github.com/MaxMEllon)
 
+## Reference
+
+- [うどん県旅ネット](http://www.my-kagawa.jp/photo/?prog=photo&exec=guide)
+  - **用途** : サイト中のうどん画像
+  - **利用規約** : http://www.my-kagawa.jp/photo/?prog=photo&exec=guide
+
 ## LICENSE
 
-This software is released under the MIT License, see LICENSE.txt.
+This softhttp://maoudamashii.jokersounds.com/music_rule.htmlware is released under the MIT License, see LICENSE.txt.
 

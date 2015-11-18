@@ -11,6 +11,13 @@ RSpec.describe ShopsController, type: :controller do
         get :new
         expect(response).to have_http_status(:success)
       end
+
+      it 'cant access if dont sign in' do
+        sign_out @user
+        expect do
+          get :new
+        end.to raise_error(UncaughtThrowError)
+      end
     end
   end
 end

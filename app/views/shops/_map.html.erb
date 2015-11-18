@@ -3,10 +3,42 @@
 </div>
 
 <script type="text/javascript">
-    handler = Gmaps.build('Google');
-    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-      markers = handler.addMarkers(<%=raw @hash.to_json %>);
-      handler.bounds.extendWith(markers);
-      handler.fitMapToBounds();
-    });
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function() {
+    markers = handler.addMarkers(<%=raw @hash.to_json %>);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });
+  var getMap = (function() {
+    function codeAddress(address) {
+      var geocoder = new google.maps.Geocoder();
+      var mapOptions = {
+        zoom: 18,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        scrollwheel: false
+      };
+      var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+      geocoder.geocode( { 'address': address}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          map.setCenter(results[0].geometry.location);
+          var marker = new google.maps.Marker({
+            map: map,
+            position: results[0].geometry.location
+          });
+        } else {
+          console.log('Geocode was not successful for the following reason: ' + status);
+        }
+      });
+    }
+    return {
+      getAddress: function() {
+        var button = document.getElementById('search');
+        button.onclick = function() {
+          var address = document.getElementById('address').value;
+          codeAddress(address);
+        }
+      }
+    };
+  })();
+  getMap.getAddress()
 </script>
