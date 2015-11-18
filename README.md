@@ -49,8 +49,3 @@ $ rails s
 
 This software is released under the MIT License, see LICENSE.txt.
 
-:memo: TODO:
-
-- [ ] 必要最低限の機能が実装されたら rebaseでcommitをひとまとめに
-- [ ] ロゴを書く
-

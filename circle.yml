@@ -7,5 +7,5 @@ test:
     - bundle exec slim-lint app/**/*.slim
 machine:
   ruby:
-    version: 2.2.0
+    version: 2.2.3
   timezone: Asia/Tokyo

@@ -16,5 +16,6 @@
 //= require uikit/js/uikit.min
 //= require uikit/js/components/notify.min
 //= require nprogress/nprogress
+//= require underscore/underscore-min.js
 //= require gmaps/google
 //= require_tree .

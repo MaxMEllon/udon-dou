@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.3'
 
 gem 'rails', '4.2.3'
 gem 'pg'
@@ -52,6 +53,7 @@ gem 'dotenv-rails'
 gem 'draper'
 gem 'font-awesome-rails'
 gem 'gmaps4rails'
+gem 'geocoder'
 gem 'kaminari'
 gem 'ransack'
 gem 'slim-rails'

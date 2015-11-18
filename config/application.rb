@@ -17,13 +17,16 @@ Bundler.require(*Rails.groups)
 
 module UdonMitchi
   class Application < Rails::Application
-    config.time_zone = 'Tokyo'
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
     config.active_record.default_timezone = :local
-
+    config.active_record.raise_in_transactional_callbacks = true
+    config.autoload_paths += %W(#{config.root}/lib)
+    config.git_revision = `git log --abbrev-commit --pretty=oneline | head -1 | cut -d' ' -f1`
+    config.i18n.default_locale = :ja
+    config.log_tags = [:remote_ip]
     config.preferred_syntax = :sass
     config.sass.syntax = :sass
-
-    config.i18n.default_locale = :ja
+    config.time_zone = 'Tokyo'
 
     config.generators do |g|
       g.template_engine = :slim
@@ -32,12 +35,5 @@ module UdonMitchi
       g.test_framework  = 'rspec'
       g.fixture_replacement :factory_girl, dir: 'spec/factories'
     end
-
-    config.action_dispatch.default_headers['X-Frame-Options'] = "ALLOWALL"
-    config.git_revision = `git log --abbrev-commit --pretty=oneline | head -1 | cut -d' ' -f1`
-    config.autoload_paths += %W(#{config.root}/lib)
-    config.active_record.raise_in_transactional_callbacks = true
-    config.log_tags = [:remote_ip]
-    config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
   end
 end
