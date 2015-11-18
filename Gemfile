@@ -46,7 +46,6 @@ end
 
 gem 'annotate'
 gem 'bower-rails'
-gem 'bower-rails'
 gem 'devise'
 gem 'devise-i18n'
 gem 'dotenv-rails'
