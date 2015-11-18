@@ -23,7 +23,7 @@
 
 ## Requirement
 
-- ruby  2.2.0
+- ruby  2.2.3
 - rails 4.2.3
 - postgresql
 - gems  : Gemfile を参照してください
