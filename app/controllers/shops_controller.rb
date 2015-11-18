@@ -1,4 +1,6 @@
 class ShopsController < ApplicationController
+  before_action :authenticate_user!, only: :new
+
   def new
     @shop = Shop.new
     @hash = Gmaps4rails.build_markers(@shop) do |shop, marker|
@@ -10,12 +12,5 @@ class ShopsController < ApplicationController
   end
 
   def create
-  end
-
-  private
-
-  def set_shop
-    return unless params[:id]
-    @shop = Shop.find(params[:id])
   end
 end
