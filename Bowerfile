@@ -1,6 +1,5 @@
 asset 'uikit'
 asset 'select2'
 asset 'nprogress'
-asset 'material-design-lite'
 asset 'material-design-icons'
 asset 'underscore'
