@@ -23,15 +23,15 @@ nav.uk-navbar.uk-navbar-attached
         ul.uk-navbar-nav
           li.uk-parent data-uk-dropdown='' aria-haspopup='true' aria-expanded='false'
             = link_to '#'
-              = fa_icon 'chevron-down', text: 'Menu'
+              = fa_icon 'chevron-down', text: 'メニュー'
             .uk-dropdown.uk-dropdown-navbar
               ul.uk-nav.uk-nav-navbar
                 li
                   = link_to edit_user_registration_path(current_user.id)
-                    = fa_icon 'pencil fw', text: 'Config'
+                    = fa_icon 'pencil fw', text: 'ユーザー情報編集'
                 li
                   = link_to destroy_user_session_path, method: :delete
-                    = fa_icon 'sign-out fw', text: 'Sign out'
+                    = fa_icon 'sign-out fw', text: 'ログアウト'
       - else
           ul.uk-navbar-nav
             li
